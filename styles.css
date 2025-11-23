@@ -1,0 +1,192 @@
+/* 1. المتغيرات والألوان */
+:root {
+    --color-primary: #0A3D62; /* أزرق داكن */
+    --color-secondary: #EAEAEA; /* رمادي فاتح جدًا */
+    --color-text-light: #ffffff;
+    --color-text-dark: #333333;
+    --custom-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 3px 5px rgba(0, 0, 0, 0.05);
+    --font-heading: 'Tajawal', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-heading);
+    background-color: #f4f4f4;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2.  (Grid Layout) */
+.cv-main {
+    width: 950px; 
+    display: grid;
+    grid-template-columns: 35% 65%; 
+    box-shadow: var(--custom-shadow);
+    border-radius: 12px; 
+    overflow: hidden;
+}
+
+/* 3. العمود الجانبي */
+.cv-side {
+    background-color: var(--color-primary);
+    background-image: linear-gradient(to top, #0A3D62, #1C5D99);
+    color: var(--color-text-light);
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #84DCC6;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.my-name {
+    font-size: 2.2em;
+    font-weight: 800;
+}
+
+.my-title {
+    font-size: 1.1em;
+    opacity: 0.85;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+/* معلومات الاتصال  */
+.info-group {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.info-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+}
+
+.info-icon {
+    width: 25px;
+    text-align: center;
+    margin-right: 15px;
+    color: #84DCC6; 
+}
+
+/*  رابط السوشيال ميديا  */
+.social-link {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.95em;
+}
+
+.social-link:hover {
+    color: #84DCC6;
+}
+
+/* 4. أقسام الشريط الجانبي */
+.section-side {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.section-title-side {
+    font-size: 1.4em;
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 15px;
+}
+
+.skill-dot {
+    font-size: 0.6em;
+    margin-left: 10px;
+}
+
+.hobbies-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.hobby-icon {
+    font-size: 1.8em;
+    opacity: 0.8;
+    color: #84DCC6;
+}
+
+/* 5. العمود الرئيسي */
+.cv-content {
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark);
+    padding: 35px 45px;
+}
+
+.content-block {
+    margin-bottom: 30px;
+}
+
+.section-title-main {
+    font-size: 1.7em;
+    font-weight: 800;
+    color: var(--color-primary);
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--color-primary);
+    margin: 25px 0 18px;
+}
+
+/* معلومات العمل والتعليم */
+.job-entry {
+    margin-bottom: 20px;
+}
+
+.job-entry h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.job-details {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.job-duties {
+    padding-right: 20px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* تصميم المهارات */
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    margin-top: 15px;
+    
+}
+
+
+.skill-card {
+    width: 120px;
+    padding:5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
